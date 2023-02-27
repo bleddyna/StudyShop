@@ -1,24 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import { ListArticle, TestComponent } from './Components'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from 'react-router-dom'
 
+const fakeData = [
+  { name: '4 saisons', price: 15 },
+  { name: '4 frommage', price: 10 },
+  { name: 'Marguarita', price: 8 }
+]
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <header>
+          <Routes>
+            <Route path='/List' element={<ListArticle articles={fakeData} />} />
+            <Route path='/Pomme' element={<h1>Pourquoi des pommes sur une pizza?</h1>} />
+            <Route path='/Test' element={<TestComponent />} />
+          </Routes>
+        </header>
+      </div>
+    </Router>
   );
 }
 
