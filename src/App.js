@@ -22,6 +22,9 @@ function App() {
             <Route path='/Test' element={<TestComponent />} />
           </Routes>
         </header>
+        <main>
+          <h1>Coucou J'ai fais la modification via mon mac!!</h1>
+        </main>
       </div>
     </Router>
   );
