@@ -1,5 +1,6 @@
 import React from 'react'
 import CardArticle from './CardArticle'
+import { Grid } from '@mui/material';
 function ListArticle(props) {
     if (!props) {
         return (<div><h1>Pas d'article!</h1></div>)
@@ -11,9 +12,9 @@ function ListArticle(props) {
             else return null
         })
         return (
-            <div>
+            <Grid container spacing={2}>
                 {articlesListing}
-            </div>
+            </Grid>
         )
     }
 }
