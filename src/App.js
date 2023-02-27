@@ -24,6 +24,8 @@ function App() {
         </header>
         <main>
           <h1>Coucou J'ai fais la modification via mon mac!!</h1>
+          <h2>Oui mais sur windows tu peux aussi!!</h2>
+          <h3>OUUUUUUIIII</h3>
         </main>
       </div>
     </Router>
